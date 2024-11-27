@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escapa de Ceobe</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Escapa de Ceobe</h1>
+    
+    <!-- Menú de selección de dificultad -->
+    <div id="menu">
+        <h2>Escoge la dificultad</h2>
+        <button onclick="setDifficulty('easy')">Fácil</button>
+        <button onclick="setDifficulty('medium')">Medio</button>
+        <button onclick="setDifficulty('hard')">Difícil</button>
+        <button onclick="setDifficulty('extreme')">Extremo</button>
+        <!-- Botón de alternar modo oscuro -->
+        <button id="toggle-dark-mode">Modo Oscuro</button>
+        <!-- Botón para alternar el sonido -->
+        <button id="toggle-sound">Silenciar Música</button>
+
+    </div>
+
+    <!-- Área de juego -->
+
+
+    <div id="game-area">
+        <div id="player" class="personaje"></div>
+        <div id="ceobe" class="personaje"></div>
+    </div>
+    <button id="pause-game">Pausar Juego</button>
+    <audio src="ceobe.m4a"></audio>
+    <script src="app.js"></script>
+</body>
+
+</html>

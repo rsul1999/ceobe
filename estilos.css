@@ -1,0 +1,86 @@
+:root {
+    --background-color: aliceblue;
+    --border-color: black;
+    --text-color: black;
+    --menu-bg-color: white;
+    --button-bg-color: lightgray;
+    --button-text-color: black;
+    --player-color: blueviolet;
+    --ceobe-bg: url('ceobe.png'); 
+    --ceobe-border: 2px solid black;
+}
+
+:root.dark-mode {
+    --background-color: #121212;
+    --border-color: #fff;
+    --text-color: white;
+    --menu-bg-color: #333;
+    --button-bg-color: #555;
+    --button-text-color: white;
+    --player-color: lightblue;
+    --ceobe-bg: url('ceobe.png'); 
+    --ceobe-border: 2px solid white; 
+}
+
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#game-area {
+    background-color: var(--background-color);
+    border: 2px solid var(--border-color);
+    width: 90vh;
+    height: 90vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.personaje {
+    height: 50px;
+    position: absolute;
+    width: 50px;
+    border: var(--ceobe-border); /* Añadimos un borde para ceobe */
+}
+
+#player {
+    background-color: var(--player-color);
+}
+
+#ceobe {
+    background-image: var(--ceobe-bg);
+    background-size: cover;
+}
+
+#menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--menu-bg-color);
+    padding: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10;
+}
+
+#menu button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: 1px solid var(--border-color);
+}
+
+#game-area {
+    display: none;
+}
